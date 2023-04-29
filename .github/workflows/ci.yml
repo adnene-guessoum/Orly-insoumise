@@ -1,0 +1,15 @@
+name: Integration continue
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Check du code source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: npm ci
+      - name: prettier
+        run: npm run format
+      - name: lint, type-check, test
+        run: npm run test-all
