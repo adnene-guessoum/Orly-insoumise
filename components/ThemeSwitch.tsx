@@ -32,7 +32,7 @@ const ThemeSwitch = (): JSX.Element => {
       {/* eslint-disable-next-line react/no-unknown-property */}
       <style jsx>{`
         .theme-button {
-          opacity: 0.5;
+          opacity: 0.8;
           position: relative;
           border-radius: 5px;
           width: 42px;
