@@ -4,4 +4,7 @@ export type PostType = {
   image?: string;
   slug: string;
   title: string;
+  category: string;
+  cover: boolean;
+  author?: string;
 };

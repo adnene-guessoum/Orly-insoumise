@@ -34,7 +34,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
         <div className="max-w-5xl px-8 mx-auto">
           <a
             className="text-gray-900 dark:text-white"
-            href="https://twitter.com/hunterhchang"
+            href="https://twitter.com/Actionpop_Orly"
           >
             Orly Insoumise - 2023
           </a>
