@@ -1,7 +1,7 @@
 {
 	"name": "Orly-insoumise",
 	"author": "Adnene Guessoum",
-	"email" : "adnen.guessoum@gmail.com",
+	"email": "adnen.guessoum@gmail.com",
 	"license": "MIT",
 	"version": "1.0.0",
 	"scripts": {
@@ -14,11 +14,11 @@
 		"test": "jest --passWithNoTests",
 		"test-all": "npm run lint && npm run type-check && npm run test"
 	},
-	"contributors" : [
+	"contributors": [
 		{
-			"name" : "Hunter Chang",
-			"email" : "@hunterhchang",
-			"url" : "https://hunterchang.com/"
+			"name": "Hunter Chang",
+			"email": "@hunterhchang",
+			"url": "https://hunterchang.com/"
 		}
 	],
 	"husky": {
@@ -42,7 +42,8 @@
 		"next-mdx-remote": "^4.1.0",
 		"next-themes": "^0.2.1",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.8.0"
 	},
 	"devDependencies": {
 		"@testing-library/react": "^13.4.0",

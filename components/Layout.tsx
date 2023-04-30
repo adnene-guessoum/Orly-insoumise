@@ -18,10 +18,10 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
       <header>
         <div className="bg-banner bg-cover bg-center h-59 max-w-5xl px-8 mx-auto">
           <div className="flex items-center justify-between py-6">
-            <div className="back-wrapper bg-white dark:bg-gray-900 ">
+            <div className="back-wrapper bg-orange-50 dark:bg-cyan-950 ">
               <Navigation />
             </div>
-            <div className="back-wrapper bg-white dark:bg-gray-900 ">
+            <div className="back-wrapper bg-orange-50 dark:bg-cyan-950 ">
               <ThemeSwitch />
             </div>
           </div>
