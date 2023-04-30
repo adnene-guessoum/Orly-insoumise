@@ -11,5 +11,5 @@ jobs:
         run: npm ci
       - name: prettier
         run: npm run format
-      - name: lint, type-check, test
-        run: npm run test-all
+      - name: lint, type-check, test # no tests written yet
+        run: npm run test-all --passWithNoTests
