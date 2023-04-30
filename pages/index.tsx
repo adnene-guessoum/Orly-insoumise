@@ -14,22 +14,30 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout>
       <h1>Bienvenue sur Orly l&apos;insoumise</h1>
-      <p>Groupe d&apos;action mobilisée sur la ville d&apos;Orly (94) pour la NUPES et la France Insoumise</p>
-      <ul className="list-disc pl-4 my-6">
-        <li>Next.js</li>
-        <li className="mt-2">Typescript</li>
-        <li className="mt-2">MDX</li>
-        <li className="mt-2">Tailwind CSS</li>
-      </ul>
+      <p>
+        Groupe d&apos;action mobilisée sur la ville d&apos;Orly (94) pour la
+        NUPES et la France Insoumise
+      </p>
 
-      <a
-        href="https://github.com/ChangoMan/nextjs-typescript-mdx-blog"
-        className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-blue-600 hover:bg-blue-700 hover:text-white dark:hover:text-white"
-      >
-        Get the source code!
-      </a>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
+        <ul className="list-disc pl-4 my-6">
+          <li>Next.js</li>
+          <li className="mt-2">Typescript</li>
+          <li className="mt-2">MDX</li>
+          <li className="mt-2">Tailwind CSS</li>
+        </ul>
 
-      {posts.map((post) => (
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
+          <a
+            href="https://github.com/ChangoMan/nextjs-typescript-mdx-blog"
+            className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-blue-600 hover:bg-blue-700 hover:text-white dark:hover:text-white"
+          >
+            Get the source code!
+          </a>
+        </div>
+      </div>
+
+      {posts.map(post => (
         <article key={post.slug} className="mt-12">
           <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
             {format(parseISO(post.date), 'MMMM dd, yyyy')}
@@ -44,7 +52,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
           <p className="mb-3">{post.description}</p>
           <p>
             <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-              <a>Lire</a>
+              <a>Lire la suite...</a>
             </Link>
           </p>
         </article>
@@ -57,7 +65,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllPosts(['date', 'description', 'slug', 'title']);
 
   return {
-    props: { posts },
+    props: { posts }
   };
 };
 
