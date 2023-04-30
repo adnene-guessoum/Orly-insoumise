@@ -19,22 +19,26 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         NUPES et la France Insoumise
       </p>
 
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
+      <div className="flex flex-col justify-between items-start md:items-center mt-8">
+        <h2 className="text-2xl font-bold tracking-tight md:tracking-tighter leading-tight">
+          Retrouvez ici :
+        </h2>
         <ul className="list-disc pl-4 my-6">
-          <li>Next.js</li>
-          <li className="mt-2">Typescript</li>
-          <li className="mt-2">MDX</li>
-          <li className="mt-2">Tailwind CSS</li>
+          <li>Nos Publications régulières : Opinions, Lectures, Analyses</li>
+          <li className="mt-2">
+            Nos Actualités, Nos Evénements et Actions militantes
+          </li>
+          <li className="mt-2">
+            Nos communiquées et comptes rendues (conseils municipales,
+            réunions...)
+          </li>
+          <li className="mt-2">
+            Nos réseaux sociaux et les différents moyens de nous rejoindre
+          </li>
+          <li className="mt-2">
+            Nos Amis du 94, de la NUPES et tous les autres
+          </li>
         </ul>
-
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-8">
-          <a
-            href="https://github.com/ChangoMan/nextjs-typescript-mdx-blog"
-            className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-blue-600 hover:bg-blue-700 hover:text-white dark:hover:text-white"
-          >
-            Get the source code!
-          </a>
-        </div>
       </div>
 
       {posts.map(post => (
