@@ -1,4 +1,5 @@
 import { format, parseISO } from 'date-fns';
+import { fr } from 'date-fns/locale';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -19,13 +20,11 @@ import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 
 // Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
+// must include components in scope
 const components = {
   Head,
   Image,
-  Link,
+  Link
 };
 
 type PostPageProps = {
@@ -35,11 +34,13 @@ type PostPageProps = {
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const customMeta: MetaProps = {
-    title: `${frontMatter.title} - Hunter Chang`,
+    title: `${frontMatter.title} - ${frontMatter.author} `,
     description: frontMatter.description,
     image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
     date: frontMatter.date,
-    type: 'article',
+    author: frontMatter.author,
+    category: frontMatter.category,
+    type: 'article'
   };
   return (
     <Layout customMeta={customMeta}>
@@ -48,7 +49,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
           {frontMatter.title}
         </h1>
         <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
-          {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
+          {format(parseISO(frontMatter.date), 'dd MMMM yyyy', { locale: fr })}
         </p>
         <div className="prose dark:prose-dark">
           <MDXRemote {...source} components={components} />
@@ -76,34 +77,34 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           rehypeAutolinkHeadings,
           {
             properties: {
-              className: ['anchor'],
-            },
-          },
-        ],
+              className: ['anchor']
+            }
+          }
+        ]
       ],
-      format: 'mdx',
+      format: 'mdx'
     },
-    scope: data,
+    scope: data
   });
 
   return {
     props: {
       source: mdxSource,
-      frontMatter: data,
-    },
+      frontMatter: data
+    }
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = postFilePaths
     // Remove file extensions for page paths
-    .map((path) => path.replace(/\.mdx?$/, ''))
+    .map(path => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js
-    .map((slug) => ({ params: { slug } }));
+    .map(slug => ({ params: { slug } }));
 
   return {
     paths,
-    fallback: false,
+    fallback: false
   };
 };
 

@@ -9,7 +9,16 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        banner: "url('/images/general/banner.png')"
+        banner: "url('/images/general/banner.png')",
+        illu1: "url('/images/general/illu1.jpg')",
+        illu2: "url('/images/general/illu2.jpg')",
+        illu3: "url('/images/general/illu3.jpg')",
+        illu4: "url('/images/general/illu4.jpg')",
+        illu5: "url('/images/general/illu5.jpg')",
+        illu6: "url('/images/general/illu6.jpg')"
+      },
+      flex: {
+        5: 5
       },
       typography: theme => ({
         DEFAULT: {
