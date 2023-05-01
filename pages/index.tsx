@@ -28,7 +28,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             Nos Actualités, Nos Evénements et Actions militantes
           </li>
           <li className="mt-2">
-            Nos communiquées et comptes rendues (conseils municipales,
+            Nos communiquées et comptes rendues (conseils municipaux,
             réunions...)
           </li>
           <li className="mt-2">
@@ -55,7 +55,15 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts(['date', 'description', 'slug', 'title']);
+  const posts = getAllPosts([
+    'date',
+    'description',
+    'slug',
+    'title',
+    'author',
+    'category',
+    'cover'
+  ]);
 
   return {
     props: { posts }

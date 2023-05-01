@@ -1,4 +1,5 @@
 import { format, parseISO } from 'date-fns';
+import { fr } from 'date-fns/locale';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -19,9 +20,7 @@ import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 
 // Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
+// must include components in scope
 const components = {
   Head,
   Image,
@@ -39,6 +38,8 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
     description: frontMatter.description,
     image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
     date: frontMatter.date,
+    author: frontMatter.author,
+    category: frontMatter.category,
     type: 'article'
   };
   return (
@@ -48,7 +49,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
           {frontMatter.title}
         </h1>
         <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
-          {format(parseISO(frontMatter.date), 'dd MMMM yyyy')}
+          {format(parseISO(frontMatter.date), 'dd MMMM yyyy', { locale: fr })}
         </p>
         <div className="prose dark:prose-dark">
           <MDXRemote {...source} components={components} />

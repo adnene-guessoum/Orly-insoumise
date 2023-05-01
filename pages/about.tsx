@@ -12,13 +12,24 @@ export const About = (): JSX.Element => {
     >
       <div className="flex flex-col justify-between items-start md:items-center mt-8 mb-8">
         <h2>Qui Sommes-Nous ?</h2>
-        <p className="m-2">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet.
-        </p>
+        <div className="mt-4">
+          <p>
+            Groupe d&apos;action de la France insoumise à Orly, nous travaillons
+            activement pour renforcer les droits des travailleurs, améliorer
+            l&apos;accès à des soins de santé abordables et de qualité, protéger
+            l&apos;environnement, et lutter contre toutes les formes de
+            discrimination au niveau de notre ville et du département.
+          </p>
+          <p>
+            Nous organisons des manifestations, des campagnes de
+            sensibilisation, et des événements pour mobiliser la communauté
+            orlysienne sur les enjeux politiques locaux et nationaux, et pour
+            entraîner les citoyens à agir pour le changement. Notre groupe est
+            inclusif, accueillant tous ceux qui partagent nos valeurs et notre
+            engagement pour une ville plus juste et équitable. Nous espérons
+            pouvoir compter sur vous pour nous rejoindre dans ces combats !
+          </p>
+        </div>
       </div>
 
       <Gallery />

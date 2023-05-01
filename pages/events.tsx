@@ -9,9 +9,8 @@ export const EventsPage = () => {
       }}
     >
       <h1>Evénements à venir : </h1>
-      <p>Ne les manquez surtout pas !</p>
 
-      <div className="event bg-gray-600">En cours</div>
+      <div className="event dark:bg-gray-600 bg-gray-300">En cours</div>
     </Layout>
   );
 };

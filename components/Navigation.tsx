@@ -3,7 +3,7 @@ import React from 'react';
 
 const Navigation = (): JSX.Element => {
   return (
-    <nav>
+    <nav className="flex flex-wrap">
       <Link href="/">
         <a className=" text-gray-900 dark:text-white p-4">Accueil</a>
       </Link>
@@ -15,6 +15,9 @@ const Navigation = (): JSX.Element => {
       </Link>
       <Link href="/events">
         <a className="text-gray-900 dark:text-white p-4">Evénements à venir</a>
+      </Link>
+      <Link href="/articles">
+        <a className="text-gray-900 dark:text-white p-4">Archives</a>
       </Link>
     </nav>
   );
