@@ -46,7 +46,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         </h2>
         <div className="posts-wrapper">
           {posts.map(post => (
-            <Publications post={post} key={post.slug} />
+            <Publications post={post} k={post.slug} key={post.slug} />
           ))}
         </div>
       </div>

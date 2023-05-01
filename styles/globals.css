@@ -17,6 +17,15 @@
   }
 }
 
+/* General styles */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 /* Post styles */
 
 .prose .anchor {
@@ -150,4 +159,13 @@ pre {
 
 .highlight-line {
   @apply block px-4 -mx-4 bg-gray-100 border-l-4 border-blue-500 dark:bg-gray-800;
+}
+
+/* Slider styles */
+
+.slide {
+  @apply relative flex-auto bg-cover bg-center transition-all duration-500 ease-in-out;
+}
+.slide:hover {
+  @apply flex-5;
 }

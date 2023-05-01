@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
 
-const Publications = ({ post, key }) => {
+const Publications = ({ post, k }) => {
   return (
     <article
-      key={key}
+      key={k}
       className="mt-7 rounded-lg bg-blue-200 dark:bg-blue-800 p-4"
     >
       <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">

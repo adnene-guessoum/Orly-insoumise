@@ -10,6 +10,12 @@ const Navigation = (): JSX.Element => {
       <Link href="/about">
         <a className="text-gray-900 dark:text-white p-4">Qui sommes-nous ?</a>
       </Link>
+      <Link href="/contact">
+        <a className="text-gray-900 dark:text-white p-4">Nous Ecrire</a>
+      </Link>
+      <Link href="/events">
+        <a className="text-gray-900 dark:text-white p-4">Evénements à venir</a>
+      </Link>
     </nav>
   );
 };

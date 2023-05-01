@@ -1,16 +1,16 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import Gallery from '../components/subcomponents/Gallery';
 import { FaTwitter, FaInstagram } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi';
 
 export const About = (): JSX.Element => {
   return (
     <Layout
       customMeta={{
-        title: 'About - Hunter Chang'
+        title: 'Infos - Orly Insoumise'
       }}
     >
-      <div className="flex flex-col justify-between items-start md:items-center mt-8">
+      <div className="flex flex-col justify-between items-start md:items-center mt-8 mb-8">
         <h2>Qui Sommes-Nous ?</h2>
         <p className="m-2">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -21,8 +21,10 @@ export const About = (): JSX.Element => {
         </p>
       </div>
 
+      <Gallery />
+
       <div className="flex flex-col justify-between items-start md:items-center mt-8">
-        <h2>Contacts :</h2>
+        <h2>Réseaux Sociaux :</h2>
 
         <div className="flex flex-col md:flex-row justify-center gap-12 md:items-center mt-8">
           <h3>Nous suivre :</h3>
@@ -47,17 +49,6 @@ export const About = (): JSX.Element => {
             Action populaire
           </a>
         </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row justify-center gap-12 md:items-center mt-8">
-        <h3>Nous écrire :</h3>
-        <a
-          href="mailto:orly.insoumise@gmail.com"
-          className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-red-600 hover:bg-red-600 hover:text-white dark:hover:text-white"
-        >
-          <FiMail className="inline-block mr-2" />
-          orly.insoumise@gmail.com
-        </a>
       </div>
     </Layout>
   );
