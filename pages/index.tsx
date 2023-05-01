@@ -18,7 +18,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         NUPES et la France Insoumise
       </p>
 
-      <div className="flex flex-col justify-between items-start md:items-center mt-8 bg-red-200 dark:bg-red-800 rounded-xl pt-2">
+      <div className="flex flex-col justify-between items-start md:items-center pl-4 mt-8 bg-red-200 dark:bg-red-800 rounded-xl pt-2">
         <h2 className="text-2xl font-bold tracking-tight md:tracking-tighter leading-tight">
           Retrouvez ici :
         </h2>
