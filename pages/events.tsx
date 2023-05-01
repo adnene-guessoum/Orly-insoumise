@@ -8,7 +8,10 @@ export const EventsPage = () => {
         title: 'Evenements - Orly Insoumise'
       }}
     >
-      <h1>Events</h1>
+      <h1>Evénements à venir : </h1>
+      <p>Ne les manquez surtout pas !</p>
+
+      <div className="event bg-gray-600">En cours</div>
     </Layout>
   );
 };
