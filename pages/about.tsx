@@ -41,7 +41,7 @@ export const About = (): JSX.Element => {
           <h3>Nous suivre :</h3>
           <a
             href="https://twitter.com/Actionpop_Orly"
-            className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-red-600 hover:bg-red-600 hover:text-white dark:hover:text-white"
+            className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-red-600 hover:bg-red-700 hover:text-white dark:hover:text-white"
             target="_blank"
             rel="noreferrer"
           >
@@ -50,7 +50,7 @@ export const About = (): JSX.Element => {
           </a>
           <a
             href="https://www.instagram.com/actionpop_orly/"
-            className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-red-600 hover:bg-red-600 hover:text-white dark:hover:text-white"
+            className="inline-block px-7 py-3 rounded-md text-white dark:text-white bg-red-600 hover:bg-red-700 hover:text-white dark:hover:text-white"
             target="_blank"
             rel="noreferrer"
           >
