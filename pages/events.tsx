@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import EventTable from '../components/EventTable';
 
 export const EventsPage = () => {
   return (
@@ -10,7 +11,9 @@ export const EventsPage = () => {
     >
       <h1>Evénements à venir : </h1>
 
-      <div className="event dark:bg-gray-600 bg-gray-300">En cours</div>
+      <div className="event dark:bg-gray-600 bg-gray-300 flex justify-center items-center">
+        <EventTable />
+      </div>
     </Layout>
   );
 };
