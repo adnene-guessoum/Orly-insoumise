@@ -1,7 +1,9 @@
 import React from 'react';
+import { getStaticProps } from '../lib/api';
+import FoldableArchive from '../components/FoldableArchive';
 import Layout from '../components/Layout';
 
-const Articles = (): JSX.Element => {
+const Articles = ({ posts }): JSX.Element => {
   return (
     <Layout
       customMeta={{
@@ -15,9 +17,11 @@ const Articles = (): JSX.Element => {
         Ne les manquez surtout pas !
       </p>
 
-      <div className="event dark:bg-gray-600 bg-gray-300">En cours</div>
+      <FoldableArchive posts={posts} />
     </Layout>
   );
 };
+
+export { getStaticProps };
 
 export default Articles;

@@ -1,8 +1,7 @@
-import { GetStaticProps } from 'next';
 import React from 'react';
 import Layout from '../components/Layout';
 import Publications from '../components/subcomponents/Publications';
-import { getAllPosts } from '../lib/api';
+import { getStaticProps } from '../lib/api';
 import { PostType } from '../types/post';
 
 type IndexProps = {
@@ -54,20 +53,6 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts([
-    'date',
-    'description',
-    'slug',
-    'title',
-    'author',
-    'category',
-    'cover'
-  ]);
-
-  return {
-    props: { posts }
-  };
-};
+export { getStaticProps };
 
 export default Index;
