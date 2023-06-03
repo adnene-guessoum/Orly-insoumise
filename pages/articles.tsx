@@ -16,7 +16,6 @@ const Articles = ({ posts }): JSX.Element => {
         et de lectures ainsi que nos prises de positions sont disponibles ici.
         Ne les manquez surtout pas !
       </p>
-
       <FoldableArchive posts={posts} />
     </Layout>
   );
