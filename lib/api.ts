@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
 import { POSTS_PATH } from '../utils/mdxUtils';
+import { GetStaticProps } from 'next';
 
 export function getPostSlugs(): string[] {
   return fs.readdirSync(POSTS_PATH);
@@ -20,7 +21,7 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostItems {
   const items: PostItems = {};
 
   // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
+  fields.forEach(field => {
     if (field === 'slug') {
       items[field] = realSlug;
     }
@@ -38,8 +39,24 @@ export function getPostBySlug(slug: string, fields: string[] = []): PostItems {
 export function getAllPosts(fields: string[] = []): PostItems[] {
   const slugs = getPostSlugs();
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map(slug => getPostBySlug(slug, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts([
+    'date',
+    'description',
+    'slug',
+    'title',
+    'author',
+    'category',
+    'cover'
+  ]);
+
+  return {
+    props: { posts }
+  };
+};
