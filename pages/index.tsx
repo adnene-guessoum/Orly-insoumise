@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Publications from '../components/subcomponents/Publications';
 import { getStaticProps } from '../lib/api';
-import IndexProps from '../types/index';
+import { IndexProps } from '../types/index';
 
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (

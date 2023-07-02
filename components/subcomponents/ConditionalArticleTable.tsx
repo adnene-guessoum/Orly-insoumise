@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IndexProps } from '../types/index';
+import { IndexProps } from '../../types/index';
 
 const ConditionalTable = ({
   posts,
