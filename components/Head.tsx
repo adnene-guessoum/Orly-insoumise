@@ -18,6 +18,10 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
 
   return (
     <NextHead>
+      <meta
+        name="google-site-verification"
+        content="bohztiUsi3bAqBnVShtRLpWetJZoOyIZoJ1P7qlIUkU"
+      />
       <title>{meta.title}</title>
       <meta content={meta.description} name="description" />
       <meta property="og:url" content={`${WEBSITE_HOST_URL}${router.asPath}`} />
