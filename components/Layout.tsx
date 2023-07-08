@@ -9,7 +9,7 @@ type LayoutProps = {
   customMeta?: MetaProps;
 };
 
-export const WEBSITE_HOST_URL = 'https://https://orly-insoumise.vercel.app/';
+export const WEBSITE_HOST_URL = 'https://orly-insoumise.vercel.app/';
 
 const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
   return (
