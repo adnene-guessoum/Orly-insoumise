@@ -17,7 +17,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
       <Head customMeta={customMeta} />
       <div className="min-h-screen">
         <header>
-          <div className="bg-banner bg-cover bg-center h-59 max-w-5xl px-8 mx-auto">
+          <div className="bg-banner bg-cover bg-center h-59 max-w-5xl xl:max-w-full xl:h-[130px] px-8 mx-auto">
             <div className="flex items-center justify-between py-6">
               <div className="back-wrapper bg-orange-50 dark:bg-cyan-950 ">
                 <Navigation />
@@ -29,10 +29,12 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
           </div>
         </header>
         <main>
-          <div className="max-w-5xl px-8 py-4 mx-auto">{children}</div>
+          <div className="max-w-5xl xl:max-w-7xl px-8 py-4 mx-auto">
+            {children}
+          </div>
         </main>
         <footer className="sticky top-[100vh] py-4">
-          <div className="max-w-5xl px-8 mx-auto">
+          <div className="max-w-5xl xl:max-w-full px-8 mx-auto">
             <a
               className="text-gray-900 dark:text-white"
               href="https://twitter.com/Actionpop_Orly"
